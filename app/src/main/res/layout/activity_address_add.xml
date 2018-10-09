@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/LinearLayoutSetMain"
+        android:layout_marginTop="8dp">
+        <TextView
+            style="@style/TextAddressMain"
+            android:text="收货人    "
+            android:layout_marginLeft="15dp"
+            />
+        <EditText
+            android:id="@+id/tv_name"
+            style="@style/EditAddressMain"
+            android:singleLine="true"
+            android:hint="请输入收货人"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        style="@style/LinearLayoutSetMain">
+        <TextView
+            style="@style/TextAddressMain"
+            android:text="联系方式"
+            android:layout_marginLeft="15dp"
+            />
+        <EditText
+            android:id="@+id/et_call"
+            style="@style/EditAddressMain"
+            android:hint="请输入联系方式"
+            android:singleLine="true"
+            android:inputType="number"/>
+
+    </LinearLayout>
+     <include layout="@layout/line"/>
+    <LinearLayout
+        android:id="@+id/ll_city"
+        style="@style/LinearLayoutSetMain">
+        <TextView
+            style="@style/TextAddressMain"
+            android:text="所在地区"
+            android:layout_marginLeft="15dp"
+            />
+        <TextView
+            android:id="@+id/tv_city_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color3"
+            android:textSize="15sp"
+            android:gravity="center_vertical|left"
+            android:layout_weight="1"
+            tools:text="北京"
+            android:layout_marginLeft="21dp"
+            android:lines="1"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/tv_city_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请选择"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/ic_go_right"/>
+    </LinearLayout>
+    <LinearLayout
+        style="@style/LinearLayoutSetMain">
+        <TextView
+            style="@style/TextAddressMain"
+            android:text="详细地址"
+            android:layout_marginLeft="15dp"
+            />
+        <EditText
+            android:id="@+id/et_address"
+            style="@style/EditAddressMain"
+            android:ellipsize="end"
+            android:singleLine="true"
+             />
+    </LinearLayout>
+    <include layout="@layout/line"/>
+    <LinearLayout
+        style="@style/LinearLayoutSetMain">
+        <TextView
+            style="@style/TextAddressMain"
+            android:text="门牌号    "
+            android:layout_marginLeft="15dp"
+            />
+        <EditText
+            android:id="@+id/tv_doornum"
+            style="@style/EditAddressMain"
+            android:singleLine="true"
+            android:hint="例：2号楼601室" />
+    </LinearLayout>
+
+</LinearLayout>

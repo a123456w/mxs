@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+       >
+        <LinearLayout
+            android:id="@+id/ll_user"
+            style="@style/LinearLayoutSetMain"
+            android:layout_marginTop="9dp"
+           >
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="17dp"
+                android:src="@drawable/ic_set_user"
+                android:layout_marginLeft="15dp"/>
+            <TextView
+                style="@style/TextSetMain"
+                android:text="个人信息" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/text_color9"
+                android:text="收货地址管理"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/ic_go_right"/>
+
+        </LinearLayout>
+        <include layout="@layout/line_left"/>
+
+        <LinearLayout
+            android:id="@+id/ll_safety"
+            style="@style/LinearLayoutSetMain">
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="17dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_set_safety"/>
+            <TextView
+                style="@style/TextSetMain"
+                android:text="账户安全" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/ic_go_right"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_down"
+            style="@style/LinearLayoutSetMain">
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="17dp"
+                android:src="@drawable/ic_set_down"
+                android:layout_marginLeft="15dp"/>
+            <TextView
+                style="@style/TextSetMain"
+                android:text="仅WiFi下自动下载最新安装包" />
+             <CheckBox
+                 android:id="@+id/cb_down"
+                 android:layout_width="49dp"
+                 android:layout_height="30dp"
+                 android:layout_marginRight="15dp"
+                 style="@style/CheckboxSetMain" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_about"
+            style="@style/LinearLayoutSetMain"
+            android:layout_marginTop="8dp">
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="17dp"
+                android:src="@drawable/ic_set_about"
+                android:layout_marginLeft="15dp"/>
+            <TextView
+                style="@style/TextSetMain"
+                android:text="关于我们" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/ic_go_right"/>
+        </LinearLayout>
+        <include layout="@layout/line_left"/>
+        <LinearLayout
+            android:id="@+id/ll_cache"
+            style="@style/LinearLayoutSetMain">
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="17dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_set_feedback"/>
+            <TextView
+                style="@style/TextSetMain"
+                android:text="清除缓存" />
+            <TextView
+                android:id="@+id/tv_cache"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color3"
+                android:layout_marginRight="10dp"
+                android:text="0.0M"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_go_out"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/shape_set_out_white"
+            android:text="退出登录"
+            android:textSize="18sp"
+            android:textColor="@color/text_color3"
+            android:gravity="center"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="15dp"/>
+    </LinearLayout>
+
+</FrameLayout>

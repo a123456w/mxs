@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.canyinghao.canrefresh.CanRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@id/can_content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/shop_goods_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"></android.support.v7.widget.RecyclerView>
+
+                <RelativeLayout
+                    android:id="@+id/empty_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:gravity="center"
+                    android:minHeight="200dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/img_empty"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/bg_empty" />
+
+                    <TextView
+                        android:id="@+id/tv_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_empty"
+                        android:gravity="center"
+                        android:text="购物车竟然是空的"
+                        android:textColor="@color/text_color6"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_skip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_one"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="再忙，也要记得买点什么犒赏自己~"
+                        android:textColor="@color/blue_08"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp">
+
+                    <View
+                        android:layout_width="30dp"
+                        android:layout_height="1dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_toLeftOf="@+id/tv_youlike"
+                        android:background="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tv_youlike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawableLeft="@drawable/ic_like"
+                        android:drawablePadding="5dp"
+                        android:text="猜你喜欢"
+                        android:textColor="@color/text_color3"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="30dp"
+                        android:layout_height="1dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/tv_youlike"
+                        android:background="@color/black" />
+                </RelativeLayout>
+
+                <com.qlzx.mylibrary.widget.NoScrollGridView
+                    android:id="@+id/grid_like"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F2F2F2"
+                    android:focusable="false"
+                    android:horizontalSpacing="10dp"
+                    android:numColumns="2"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:verticalSpacing="10dp">
+
+                </com.qlzx.mylibrary.widget.NoScrollGridView>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <com.canyinghao.canrefresh.classic.ClassicRefreshView
+            android:id="@id/can_refresh_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.canyinghao.canrefresh.classic.ClassicRefreshView
+            android:id="@id/can_refresh_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.canyinghao.canrefresh.CanRefreshLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/ll"
+        android:background="@color/lineColor" />
+
+    <RelativeLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/division_color">
+
+
+        <CheckBox
+            android:id="@+id/isAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:background="@null"
+            android:button="@drawable/selector_check_bg"
+            android:checked="false"
+            android:focusable="false"
+            android:paddingLeft="6dp"
+            android:text="全选" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="合计:"
+                android:textColor="@color/text_color3"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/money"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="￥0"
+                android:textColor="#f00"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/commodity"
+            android:layout_width="114dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/blue_15"
+            android:gravity="center"
+            android:text="结算(0)"
+            android:textColor="#fff"
+            android:textSize="18dp" />
+
+    </RelativeLayout>
+
+
+    <com.guo.qlzx.maxiansheng.util.costom.ClassifyCircleMoveView
+        android:id="@+id/cm_circle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</RelativeLayout>

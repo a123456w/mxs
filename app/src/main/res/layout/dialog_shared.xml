@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <TextView
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:text="分享至"
+        android:textSize="14sp"
+        android:textColor="@color/text_color3"/>
+    <include layout="@layout/line"/>
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <LinearLayout
+            android:id="@+id/ll_wechat"
+            style="@style/LinearLayoutSharedMenu"
+            >
+            <ImageView
+                style="@style/ImageViewHomeMenu"
+                android:src="@drawable/ic_wechat_shared"/>
+            <TextView
+                style="@style/TextViewSharedMenu"
+                android:text="微信"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_friend"
+            style="@style/LinearLayoutSharedMenu"
+            >
+            <ImageView
+                style="@style/ImageViewHomeMenu"
+                android:src="@drawable/ic_friend_shared"/>
+            <TextView
+                style="@style/TextViewSharedMenu"
+                android:text="朋友圈"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_qq"
+            style="@style/LinearLayoutSharedMenu"
+            >
+            <ImageView
+                style="@style/ImageViewHomeMenu"
+                android:src="@drawable/ic_qq_shared"/>
+            <TextView
+                style="@style/TextViewSharedMenu"
+                android:text="QQ"/>
+        </LinearLayout>
+    </LinearLayout>
+    <include layout="@layout/line"/>
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:text="取消"
+        android:gravity="center"
+        android:textColor="@color/text_color3"
+        android:textSize="16sp"/>
+</LinearLayout>

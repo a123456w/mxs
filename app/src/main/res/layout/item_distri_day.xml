@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/abroad_color"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="#f2f2f2">
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/color6_size14"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="今天" />
+
+</RelativeLayout>

@@ -1,0 +1,383 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme.Main" parent="AppTheme" />
+    <!--自定义dialog背景全透明无边框theme -->
+    <style name="MyDialog" parent="android:Theme.Light">
+        <!--背景颜色及和透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <!--底部弹出-->
+    <style name="BottomDialog.Animation" parent="Animation.AppCompat.Dialog">
+        <item name="android:windowEnterAnimation">@anim/tranlate_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/tranlate_dialog_out</item>
+    </style>
+
+    <!--首页底部切换按钮-->
+    <style name="bottomTabStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">0dp</item>
+        <item name="android:textSize">@dimen/tabTextSize</item>
+        <item name="android:textColor">@color/tab_text_color</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+
+    <!--反馈信息切换按钮-->
+    <style name="RadioBtnSetFeedback">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:drawablePadding">@dimen/tabTextImageMargin</item>
+        <item name="android:textSize">@dimen/tabTextSize</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingTop">7dp</item>
+        <item name="android:paddingBottom">7dp</item>
+    </style>
+
+    <!--反馈信息类型切换按钮-->
+    <style name="RadioBtnSetFeedbackType">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/selector_feedback_rb</item>
+        <item name="android:textColor">@color/selector_feedback_rb</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingLeft">6dp</item>
+        <item name="android:paddingRight">6dp</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+    </style>
+    <!--首页菜单-->
+    <style name="TextHomeMenu">
+        <item name="android:layout_width">43dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:drawablePadding">20dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_color3</item>
+    </style>
+    <!--首页菜单 文字-->
+    <style name="TextViewHomeMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_color3</item>
+        <item name="android:lines">1</item>
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+    <!--分享菜单 文字-->
+    <style name="TextViewSharedMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_color6</item>
+        <item name="android:lines">1</item>
+        <item name="android:layout_marginTop">9dp</item>
+    </style>
+    <!--分享菜单 布局-->
+    <style name="LinearLayoutSharedMenu">
+        <item name="android:layout_width">43dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <!--首页菜单 图片-->
+    <style name="ImageViewHomeMenu">
+        <item name="android:layout_width">43dp</item>
+        <item name="android:layout_height">43dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+    <!--首页菜单 布局-->
+    <style name="LinearLayoutHomeMenu">
+        <item name="android:layout_width">43dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <!--设置 文字-->
+    <style name="TextSetMain">
+        <item name="android:textColor">@color/text_color3</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <!--地址 文字-->
+    <style name="TextAddressMain">
+        <item name="android:textColor">@color/text_color3</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!--地址 输入-->
+    <style name="EditAddressMain">
+        <item name="android:textColor">@color/text_color3</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColorHint">@color/text_color6</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">21dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:lines">1</item>
+    </style>
+    <!--设置 总布局-->
+    <style name="LinearLayoutSetMain">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/white</item>
+    </style>
+    <!--设置 wifi下载-->
+    <style name="CheckboxSetMain" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/selector_set_down_check</item>
+    </style>
+    <!--会员中心 ll布局文字-->
+    <style name="TextMemberCenter">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/text_color6</item>
+        <item name="android:layout_marginTop">19dp</item>
+    </style>
+     <!--会员中心 ll布局-->
+    <style name="LinearLayoutMemberCenter">
+        <item name="android:layout_height">88dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@drawable/bg_member</item>
+    </style>
+
+    <style name="TabLayoutTextStyle">
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="style_pop_animation">
+        <item name="android:windowEnterAnimation">@anim/anim_pop_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_pop_out</item>
+    </style>
+
+
+    <style name="color6_size14">
+        <item name="android:textColor">#666666</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="color333333_size15">
+        <item name="android:textColor">#333333</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="color666666_size13">
+        <item name="android:textColor">#666666</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+    <style name="color666666_size12">
+        <item name="android:textColor">#666666</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+    <style name="colorbbbbbb_size12">
+        <item name="android:textColor">#bbbbbb</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="colordd060e_size18">
+        <item name="android:textColor">#dd060e</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="colordd0f1b_size23">
+        <item name="android:textColor">#dd0f1b</item>
+        <item name="android:textSize">23sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="color333333_size23">
+        <item name="android:textColor">#333333</item>
+        <item name="android:textSize">23sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+    <!-- Text style "" -->
+    <!-- Add this snippet to styles.xml. -->
+    <style name="color3_size14">
+        <item name="android:textColor">#333333</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="color3_size13">
+        <item name="android:textColor">#333333</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="color6_size15">
+        <item name="android:textColor">#666666</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="color9_size12">
+        <item name="android:textColor">#999999</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="color9_size13">
+        <item name="android:textColor">#999999</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="color9_size14">
+        <item name="android:textColor">#999999</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="color3_size15">
+        <item name="android:textColor">#333333</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="color3_size12">
+        <item name="android:textColor">#333333</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="colore75252_size14">
+        <item name="android:textColor">#e75252</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="colore75252_size13">
+        <item name="android:textColor">#e75252</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="colore75252_size12">
+        <item name="android:textColor">#e75252</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="coloreffffff_size13">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="colordd0f1b_size12">
+        <item name="android:textColor">#dd0f1b</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="colordd0f1b_size15">
+        <item name="android:textColor">#dd0f1b</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="colordd0f1b_size14">
+        <item name="android:textColor">#dd0f1b</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="colordd0f1b_size16">
+        <item name="android:textColor">#dd0f1b</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+    colordd0f1b_size16
+
+    <style name="colorffffff_size12">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="color6_size13">
+        <item name="android:textColor">#666666</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="color6_size11">
+        <item name="android:textColor">#666666</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="colore75252_size15">
+        <item name="android:textColor">#e75252</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="colore75252_size18">
+        <item name="android:textColor">#e75252</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="color9_size15">
+        <item name="android:textColor">#333333</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textColorHint">#999999</item>
+    </style>
+
+    <style name="color9_size16">
+        <item name="android:textColor">#666</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textColorHint">#999999</item>
+    </style>
+
+
+</resources>

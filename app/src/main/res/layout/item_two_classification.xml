@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/abroad_color"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/background_color">
+
+    <ImageView
+        android:id="@+id/rexiao_pic"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/rexaio" />
+
+    <TextView
+        android:id="@+id/tv_two_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/rexiao_pic"
+        android:gravity="center"
+        android:text="热销"
+        android:textColor="@color/text_color3"
+        android:textSize="13sp" />
+
+</RelativeLayout>

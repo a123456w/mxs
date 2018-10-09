@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<include
+        layout="@layout/layout_title_bar"/>-->
+
+    <RelativeLayout
+        android:id="@+id/rl_title_"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingTop="20dp">
+
+        <ImageView
+            android:id="@+id/iv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:src="@drawable/ic_back_left" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@id/iv_left"
+            android:src="@drawable/bg_headline_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <include layout="@layout/line" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <com.canyinghao.canrefresh.CanRefreshLayout
+
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="64dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/can_content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.canyinghao.canrefresh.classic.ClassicRefreshView
+            android:id="@+id/can_refresh_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.canyinghao.canrefresh.classic.ClassicRefreshView
+            android:id="@+id/can_refresh_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.canyinghao.canrefresh.CanRefreshLayout>
+</FrameLayout>

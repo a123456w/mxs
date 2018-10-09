@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/ll_kill"
+    android:visibility="gone"
+    android:background="@drawable/shape_kill">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_seconds_kill"
+        android:layout_marginBottom="13dp"
+        android:layout_marginTop="13dp"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_seconds_kill"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="2"
+        android:paddingLeft="@dimen/listPaddingLeft"
+        android:layout_marginBottom="15dp"
+        android:paddingRight="@dimen/listPaddingLeft">
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

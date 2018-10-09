@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.guo.qlzx.maxiansheng.util.costom.SwipeItemLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        app:layout_itemType="main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/ll__item_shopcar"
+            android:layout_width="match_parent"
+            android:layout_height="105dp">
+
+            <CheckBox
+                android:id="@+id/id_cb_select_child"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:button="@drawable/selector_check_bg"
+                android:focusable="false"
+                android:paddingRight="15dp" />
+
+            <ImageView
+                android:id="@+id/goods_pic"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="fitXY"
+                android:src="@drawable/image_goods_defout" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/goods_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    tools:text="广西百香果热带新鲜水果现摘西番莲鸡蛋果5斤精装大..."
+                    android:textColor="@color/text_color3"
+                    android:textSize="13sp"
+                    android:maxLines="2"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:id="@+id/rlc"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/jjl"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/goods_spec"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="规格：4个/盒"
+                            android:textColor="@color/text_color6"
+                            android:textSize="12sp"
+                            android:lines="1"/>
+
+                        <TextView
+                            android:id="@+id/goods_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:textColor="@color/redColor"
+                            android:textSize="13sp"
+                            tools:text="￥18.00/盒"
+                            android:lines="1"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/jjl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginRight="6dp"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/shape_add_goods_gray"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/goods_reduce"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:text="-"
+                            android:gravity="center"
+                            android:textStyle="bold" />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/color_cccccc"/>
+                        <com.guo.qlzx.maxiansheng.view.TextEditTextView
+                            android:id="@+id/goods_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="1"
+                            android:inputType="number"
+                            android:background="@null"
+                            android:textColor="@color/text_color3"
+                            android:textSize="13sp" />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/color_cccccc"/>
+                        <TextView
+                            android:id="@+id/goods_add"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:text="+"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/value_added_service"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="45dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:text="增值服务"
+                android:textColor="@color/text_color3"
+                android:textSize="13sp" />
+            <TextView
+                android:id="@+id/tv_service"
+                android:drawableLeft="@drawable/ic_checked"
+                android:drawablePadding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                tools:text="清洗：0.5元/kg"
+                android:textColor="@color/text_color3"
+                android:textSize="13sp" />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_goodstotal"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="45dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/goods_total"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/goods_total_price"
+                android:gravity="center_vertical"
+                android:text="小计： "
+                android:textColor="@color/text_color3"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/goods_total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:gravity="center_vertical"
+                android:text="￥18.00"
+                android:textColor="@color/redColor"
+                android:textSize="15sp" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="#F2F2F2" />
+    </LinearLayout>
+
+    <Button
+        app:layout_itemType="menu"
+        android:layout_width="60dp"
+        android:id="@+id/btn_delete"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:text="删除"
+        android:layout_marginBottom="8dp"
+        android:background="@color/blue_15"
+        android:layout_height="match_parent" />
+</com.guo.qlzx.maxiansheng.util.costom.SwipeItemLayout>

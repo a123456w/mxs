@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tl_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="bottom"
+        android:background="#ffffff"
+        android:fillViewport="false"
+        app:tabMode="fixed"
+        app:layout_scrollFlags="scroll"
+        app:tabIndicatorColor="@color/blue_15"
+        app:tabIndicatorHeight="1dp"
+        app:tabSelectedTextColor="@color/blue_15"
+        app:tabTextColor="@color/text_color3">
+        <android.support.design.widget.TabItem
+            android:text="未使用"
+            android:layout_width="50dp"
+            android:layout_height="match_parent" />
+        <android.support.design.widget.TabItem
+            android:text="已失效"
+            android:layout_width="50dp"
+            android:layout_height="match_parent" />
+    </android.support.design.widget.TabLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_list"
+        android:layout_below="@id/tl_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/white">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rl_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+        </android.support.v7.widget.RecyclerView>
+        <RelativeLayout
+            android:id="@+id/empty_list"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img_empty"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/bg_empty"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/tv_skip"
+                android:layout_below="@id/img_empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="您没有优惠券，去领券中心看一下吧！"
+                android:textColor="@color/blue_08"
+                android:textSize="13sp"
+                android:gravity="center"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/ll_lose"
+        android:layout_below="@id/tl_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/white"
+        android:visibility="gone">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rl_lose"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+        </android.support.v7.widget.RecyclerView>
+        <RelativeLayout
+            android:id="@+id/empty_lose"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/iv_empty"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/bg_empty"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:layout_below="@id/iv_empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="o(╥﹏╥)o  您好，暂无数据"
+                android:textColor="@color/text_color6"
+                android:textSize="12sp"
+                android:gravity="center"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

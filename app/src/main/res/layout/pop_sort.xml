@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_trans"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_moren"
+        style="@style/color6_size14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="默认" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        style="@style/style_separate_line"/>
+
+    <TextView
+        android:id="@+id/tv_price_down"
+        style="@style/color6_size14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="价格高到低" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        style="@style/style_separate_line"/>
+
+    <TextView
+        android:id="@+id/tv_price_up"
+        style="@style/color6_size14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="价格低到高" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        style="@style/style_separate_line"/>
+
+    <TextView
+        android:id="@+id/tv_num_down"
+        style="@style/color6_size14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="销量高到低" />
+
+</LinearLayout>

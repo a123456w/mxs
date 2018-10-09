@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="30dp"
+        android:scaleType="fitXY"
+        app:riv_mutate_background="true"
+        android:src="@mipmap/ic_icon"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color3"
+        android:textSize="16sp"
+        android:text="马鲜生"
+        android:gravity="center"
+        android:layout_marginTop="17dp"/>
+    <TextView
+        android:id="@+id/tv_version_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        tools:text="v1.1.0"
+        android:textSize="14sp"
+        android:textColor="@color/text_color6"
+        android:layout_marginTop="9dp"/>
+    <LinearLayout
+        android:id="@+id/ll_about_msg"
+        style="@style/LinearLayoutSetMain"
+        android:layout_marginTop="36dp">
+        <TextView
+            style="@style/TextSetMain"
+            android:text="版权信息"
+            android:layout_marginLeft="15dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_go_right"/>
+    </LinearLayout>
+
+    <include layout="@layout/line_left"/>
+    <LinearLayout
+        android:id="@+id/ll_about_agreement"
+        style="@style/LinearLayoutSetMain">
+        <TextView
+            style="@style/TextSetMain"
+            android:text="软件使用许可协议"
+            android:layout_marginLeft="15dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_go_right"/>
+    </LinearLayout>
+
+    <include layout="@layout/line_left"/>
+    <LinearLayout
+        android:id="@+id/ll_about_law"
+        style="@style/LinearLayoutSetMain">
+        <TextView
+            style="@style/TextSetMain"
+            android:text="法律声明与隐私权政策"
+            android:layout_marginLeft="15dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_go_right"/>
+    </LinearLayout>
+
+    <include layout="@layout/line_left"/>
+    <LinearLayout
+        android:id="@+id/ll_about_explain"
+        style="@style/LinearLayoutSetMain">
+        <TextView
+            style="@style/TextSetMain"
+            android:text="说明"
+            android:layout_marginLeft="15dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_go_right"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_feedback_btn"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/blue_15"
+        style="?android:attr/borderlessButtonStyle"
+        android:text="检查更新"/>
+
+    <LinearLayout
+        android:layout_gravity="bottom|center_horizontal"
+        android:gravity="bottom|center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="15dp">
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="北京马鲜生商贸有限公司"
+            android:textSize="12sp"
+            android:textColor="@color/color_cccccc"/>
+        <TextView
+            android:id="@+id/tv_copyright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CopyRight © 2016-2018 All Rights Reserved"
+            android:textSize="12sp"
+            android:textColor="@color/color_cccccc"/>
+    </LinearLayout>
+</LinearLayout>

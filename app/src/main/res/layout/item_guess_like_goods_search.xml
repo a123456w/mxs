@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.guo.qlzx.maxiansheng.view.SquareImageView
+        android:id="@+id/iv_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerCrop"
+        />
+
+    <RelativeLayout
+        android:layout_toRightOf="@id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            tools:text="标题"
+            android:textSize="13sp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxEms="10"
+            android:textColor="@color/text_color6"/>
+
+        <TextView
+            android:id="@+id/tv_vip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#15a4f4"
+            android:textSize="12sp"
+            tools:text="会员价  ￥68.88/盒"
+            android:layout_marginTop="11dp"
+            android:layout_below="@id/tv_title"/>
+        <TextView
+            android:id="@+id/tv_status"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#dd060e"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:background="@drawable/shape_tejia"
+            android:textSize="12sp"
+            android:lines="1"
+            tools:text="特价"
+            android:layout_marginTop="11dp"
+            android:layout_below="@id/tv_title"/>
+        <LinearLayout
+            android:id="@+id/ll_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/tv_vip"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/redColor"
+                android:textSize="15sp"
+                tools:text="￥15.00"/>
+            <TextView
+                android:id="@+id/tv_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/text_color6"
+                tools:text="/盒"/>
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@+id/ll_price"
+            android:src="@drawable/ic_add_home" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

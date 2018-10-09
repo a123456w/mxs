@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/white">
+  <RelativeLayout
+      android:id="@+id/rl_system"
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:layout_marginRight="15dp"
+      android:layout_marginLeft="15dp">
+
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_system"
+        android:layout_centerVertical="true"
+        />
+    <TextView
+        android:id="@+id/tv_sever"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:textSize="9sp"
+        android:lines="1"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:background="@drawable/ba_red"/>
+    <LinearLayout
+        android:id="@+id/ll_system"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/iv_img"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:textSize="15sp"
+
+          android:text="系统消息"
+          android:lines="1"
+          android:textColor="@color/text_color3" />
+    </LinearLayout>
+  </RelativeLayout>
+  <include layout="@layout/line_left"/>
+  <RelativeLayout
+      android:id="@+id/rl_inform"
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:layout_marginRight="15dp"
+      android:layout_marginLeft="15dp">
+
+    <ImageView
+        android:id="@+id/iv_imgage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_inform"
+        android:layout_centerVertical="true"
+        />
+    <TextView
+        android:id="@+id/tv_people"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:textSize="9sp"
+        android:lines="1"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:background="@drawable/ba_red"/>
+    <LinearLayout
+        android:id="@+id/ll_inform"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/iv_imgage"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:textSize="15sp"
+          android:text="个人消息"
+          android:lines="1"
+          android:textColor="@color/text_color3" />
+    </LinearLayout>
+  </RelativeLayout>
+  <include layout="@layout/line_left"/>
+</LinearLayout>

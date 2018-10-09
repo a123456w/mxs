@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp">
+
+        <com.canyinghao.canrefresh.CanRefreshLayout
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/can_content_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.canyinghao.canrefresh.classic.ClassicRefreshView
+                android:id="@id/can_refresh_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.canyinghao.canrefresh.classic.ClassicRefreshView
+                android:id="@id/can_refresh_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </com.canyinghao.canrefresh.CanRefreshLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/img_empty"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/bg_empty"
+                android:layout_centerInParent="true"/>
+            <TextView
+                android:id="@+id/tv_one"
+                android:layout_below="@id/img_empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="您还没有相关的订单"
+                android:textColor="@color/text_color6"
+                android:textSize="12sp"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/tv_skip"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/tv_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="看看有哪些爱吃的赶紧去下单~"
+                android:textColor="@color/blue_08"
+                android:textSize="13sp"
+                android:gravity="center"/>
+        </RelativeLayout>
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

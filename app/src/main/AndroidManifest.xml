@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.guo.qlzx.maxiansheng">
+
+    <!-- //地图SDK（包含其搜索功能）需要的基础权限 -->
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 其他下边已经包含 -->
+
+
+    <!-- 允许程序打开网络套接字 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 拨打电话 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 通讯录权限 -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    //6.0
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    //6.0之前
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+
+    <!-- Required -->
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- 极光 -->
+    <permission
+        android:name="com.guo.qlzx.maxiansheng.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="com.guo.qlzx.maxiansheng.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:name=".application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon, android:label,android:theme">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.guo.qlzx.maxiansheng.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/rc_file_path" />
+        </provider>
+
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 首页 -->
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- 引导页 -->
+        <activity
+            android:name=".activity.GuideActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 高德地图配置key值 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="b40f8460d8597bd343076a6ce722f95c" />
+        <!-- b40f8460d8597bd343076a6ce722f95c -->
+        <!-- 搜索页面 -->
+        <activity
+            android:name=".activity.SearchActivity"
+            android:screenOrientation="portrait" />
+        <!-- 首页头条列表界面 -->
+        <activity
+            android:name=".activity.HeadlineNewsListActivity"
+            android:screenOrientation="portrait" />
+        <!-- 首页头条-详情页面 -->
+        <activity
+            android:name=".activity.HeadlineNewsDetailsActivity"
+            android:screenOrientation="portrait" />
+        <!-- 设置-意见反馈 -->
+        <activity
+            android:name=".activity.SetFeedBackActivity"
+            android:screenOrientation="portrait" />
+        <!-- 设置界面 -->
+        <activity
+            android:name=".activity.SetActivity"
+            android:screenOrientation="portrait" />
+        <!-- 设置用户信息 -->
+        <activity
+            android:name=".activity.SetPersonalDetailsActivity"
+            android:screenOrientation="portrait" />
+        <!-- 账户安全 -->
+        <activity
+            android:name=".activity.SetSafetyActivity"
+            android:screenOrientation="portrait" />
+        <!-- 账户安全信息 -->
+        <activity
+            android:name=".activity.SetSafetyInfoActivity"
+            android:screenOrientation="portrait" />
+        <!-- 修改手机号码1 -->
+        <activity
+            android:name=".activity.VerifyPhoneActivity"
+            android:screenOrientation="portrait" />
+        <!-- 设置密码/修改密码 -->
+        <activity
+            android:name=".activity.SetPayPasswordActivity"
+            android:screenOrientation="portrait" />
+        <!-- 关于我们 -->
+        <activity
+            android:name=".activity.AboutActivity"
+            android:screenOrientation="portrait" />
+        <!-- 网页 -->
+        <activity
+            android:name=".activity.WebActivity"
+            android:screenOrientation="portrait" />
+        <!-- 登陆界面 -->
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <!-- 地址管理主界面 -->
+        <activity
+            android:name=".activity.AddressManagementActivity"
+            android:screenOrientation="portrait" />
+        <!-- 手机登陆 -->
+        <activity
+            android:name=".activity.MobileLoginActivity"
+            android:screenOrientation="portrait" />
+        <!-- 新建地址/修改地址 -->
+        <activity
+            android:name=".activity.AddAddressActivity"
+            android:screenOrientation="portrait" />
+        <!-- 订单 -->
+        <activity
+            android:name=".activity.OrderActivity"
+            android:screenOrientation="portrait" />
+        <!-- 活动专场 -->
+        <activity
+            android:name=".activity.ActivitySessionActivity"
+            android:screenOrientation="portrait" />
+        <!-- 秒杀专场 -->
+        <activity
+            android:name=".activity.KillSessionActivity"
+            android:screenOrientation="portrait" />
+        <!-- 搜索结果 -->
+        <activity
+            android:name=".activity.SearchListActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <!-- 确认订单 -->
+        <activity
+            android:name=".activity.SettlementActivity"
+            android:screenOrientation="portrait" />
+        <!-- 会员中心 -->
+        <activity
+            android:name=".activity.MemberCenterActivity"
+            android:screenOrientation="portrait" />
+        <!-- 邀请好友 -->
+        <activity
+            android:name=".activity.InviteActivity"
+            android:screenOrientation="portrait" />
+        <!-- 点击一级分类跳入的页面 -->
+        <activity
+            android:name=".activity.ClassificationTwoActivity"
+            android:screenOrientation="portrait" />
+        <!-- 详情页面 -->
+        <activity
+            android:name=".activity.ProductDetailsActivity"
+            android:screenOrientation="portrait" />
+        <!-- 优惠券 -->
+        <activity
+            android:name=".activity.CouponActivity"
+            android:screenOrientation="portrait" />
+        <!-- 我的足迹 -->
+        <activity
+            android:name=".activity.FootMarkActivity"
+            android:screenOrientation="portrait" />
+        <!-- 订单详情 -->
+        <activity
+            android:name=".activity.OrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <!-- 我的余额/我的菜籽 -->
+        <activity
+            android:name=".activity.MyBalanceActivity"
+            android:screenOrientation="portrait" />
+        <!-- 我的资产 -->
+        <activity
+            android:name=".activity.MyAssetActivity"
+            android:screenOrientation="portrait" />
+        <!-- 提现方式选择 -->
+        <activity
+            android:name=".activity.CashWayActivity"
+            android:screenOrientation="portrait" />
+        <!-- 余额提现界面 -->
+        <activity
+            android:name=".activity.CashBalanceActivity"
+            android:screenOrientation="portrait" />
+        <!-- 发布评价 -->
+        <activity
+            android:name=".activity.EvaluateActivity"
+            android:screenOrientation="portrait" />
+        <!-- 评价列表 -->
+        <activity
+            android:name=".activity.EvaluateListActivity"
+            android:screenOrientation="portrait" />
+        <!-- 提现结果 -->
+        <activity
+            android:name=".activity.CashBalanceResultActivity"
+            android:screenOrientation="portrait" />
+        <!-- 设置-修改密码 -->
+        <activity
+            android:name=".activity.ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <!-- 首页-新人有优惠券 -->
+        <activity
+            android:name=".activity.NewbieActivity"
+            android:screenOrientation="portrait" />
+        <!-- 常见问题 -->
+        <activity
+            android:name=".activity.FaqActivity"
+            android:screenOrientation="portrait" />
+        <!-- 常见问题详情 -->
+        <activity
+            android:name=".activity.FaqDetailsActivity"
+            android:screenOrientation="portrait" />
+        <!-- 领券中心 -->
+        <activity
+            android:name=".activity.CouponCenterActivity"
+            android:screenOrientation="portrait" />
+        <!-- 消息中心 -->
+        <activity
+            android:name=".activity.MessageCenterActivity"
+            android:screenOrientation="portrait" />
+        <!-- 消息中心二级列表 -->
+        <activity
+            android:name=".activity.MessageCenterListActivity"
+            android:screenOrientation="portrait" />
+        <!-- 消息中心-消息详情 -->
+        <activity
+            android:name=".activity.MessageDetailsActivity"
+            android:screenOrientation="portrait" />
+        <!-- 选择收货地址 -->
+        <activity
+            android:name=".activity.MapActivity"
+            android:screenOrientation="portrait" />
+        <!-- 使用优惠卷 -->
+        <activity
+            android:name=".activity.OrderCouponActivity"
+            android:screenOrientation="portrait" />
+        <!-- 输入框搜索文本(地图的) -->
+        <activity
+            android:name=".activity.SearchSelectionActivity"
+            android:screenOrientation="portrait" />
+        <!-- 绑定支付宝 -->
+        <activity
+            android:name=".activity.ALiPayActivity"
+            android:screenOrientation="portrait" />
+        <!-- 消息详情-二次支付 -->
+        <activity
+            android:name=".activity.ToPayAgainDetailsActivity"
+            android:screenOrientation="portrait" />
+        <!-- 查看物流 -->
+        <activity
+            android:name=".activity.LogisticsActivity"
+            android:screenOrientation="portrait" />
+        <!-- 剪切图片 -->
+        <activity android:name=".activity.ClipImageActivity" />
+
+        <!-- 高德 定位 -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <!-- Rich push 核心功能 since 2.0.6 -->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:exported="false"
+            android:theme="@style/MyDialogStyle" />
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.guo.qlzx.maxiansheng" />
+            </intent-filter>
+        </activity>
+        <!-- Required SDK 核心功能 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:exported="false"
+            android:process=":mult">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+        <!-- since 3.0.9 Required SDK 核心功能 -->
+        <provider
+            android:name="cn.jpush.android.service.DataProvider"
+            android:authorities="com.guo.qlzx.maxiansheng.DataProvider"
+            android:exported="false" />
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="com.guo.qlzx.maxiansheng" />
+            </intent-filter>
+        </service>
+        <!-- since 3.1.0 Required SDK 核心功能 -->
+        <provider
+            android:name="cn.jpush.android.service.DownloadProvider"
+            android:authorities="com.guo.qlzx.maxiansheng.DownloadProvider"
+            android:exported="true" />
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!-- Required  显示通知栏 -->
+                <category android:name="com.guo.qlzx.maxiansheng" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <receiver
+            android:name=".jpush.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.guo.qlzx.maxiansheng" />
+            </intent-filter>
+        </receiver>
+
+        <!-- User defined.  For test only  用户自定义接收消息器,3.0.7开始支持,目前新tag/alias接口设置结果会在该广播接收器对应的方法中回调 -->
+        <receiver android:name=".jpush.MyJPushMessageReceiver">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+
+                <category android:name="com.guo.qlzx.maxiansheng" />
+            </intent-filter>
+        </receiver>
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="60930515e59bc0b43e7d7538" /> <!-- </>值来自开发者平台取得的AppKey -->
+        <!-- Required SDK 核心功能 -->
+        <activity
+            android:name="cn.jiguang.share.android.ui.JiguangShellActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+            <!-- Optional QQ 分享回调 -->
+            <!-- scheme为“tencent” 前缀再加上 QQ 开发者应用的 appID；例如 appID为123456，则 scheme＝“tencent123456” -->
+            <intent-filter>
+                <data android:scheme="tencent1106750245" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- Optional 新浪微博分享回调 -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- Optional 新浪微博私信回调 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="sinaweibo"
+                    android:scheme="jsharesdk" />
+            </intent-filter>
+        </activity>
+
+        <!-- Optional 微信分享回调,wxapi 必须在包名路径下，否则回调不成功 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 支付宝网页支付 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- 微信支付 -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+
+        <receiver android:name=".util.UpdataBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+                <!-- <action android:name="android.intent.action.PACKAGE_INSTALL" /> -->
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".activity.PutForwardActivity" />
+        <activity android:name=".activity.RefundActivity"></activity>
+    </application>
+
+</manifest>

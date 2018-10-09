@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_presell"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:scaleType="center"
+        android:src="@drawable/bg_presell"
+        android:layout_marginTop="370dp"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_rope"
+        android:layout_marginTop="345dp"/>
+    <ImageView
+        android:id="@+id/iv_kill"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:scaleType="center"
+        android:src="@drawable/bg_kill"
+        android:layout_marginTop="225dp"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_rope"
+        android:layout_marginTop="200dp"/>
+    <ImageView
+        android:id="@+id/iv_groupon"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:scaleType="center"
+        android:src="@drawable/bg_groupon"
+        android:layout_marginTop="86dp"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/bg_eave"/>
+</RelativeLayout>

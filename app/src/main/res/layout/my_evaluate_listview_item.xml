@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/evaluate_goods_pic"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_goods_defout" />
+
+        <LinearLayout
+            android:layout_toRightOf="@id/evaluate_goods_pic"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="描述相符  "
+                android:textColor="@color/text_color6"
+                android:textSize="14dp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@android:style/Widget.DeviceDefault.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:rating="0"
+                android:stepSize="1"
+                android:progressDrawable="@drawable/ratingbar_drawable"/>
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/evaluate_goods_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="80dp"
+        android:background="@null"
+        android:gravity="start"
+        android:hint="商品很好，服务很好，下次还来"
+        android:minLines="3"
+        android:scrollbars="none"
+        android:textColor="@color/text_color3"
+        android:textColorHint="@color/text_color9"
+        android:textSize="16sp" />
+
+    <GridView
+        android:id="@+id/evaluate_goods_gr"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:numColumns="4"
+        android:layout_marginBottom="8dp">
+
+    </GridView>
+
+
+</LinearLayout>

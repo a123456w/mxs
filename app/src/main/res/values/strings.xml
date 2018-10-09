@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">马鲜生</string>
+    <string name="account_rule">1234567890ABCDEFGHIGKLMNOPQRSTUVWXYZabcdefghigklmnopqrstuvwxyz@.</string>
+    <string name="version_name">V</string>
+    <string name="can_not_find_version_name">不能找到版本信息</string>
+
+    <string name="no_more">没有更多了</string>
+
+
+</resources>
